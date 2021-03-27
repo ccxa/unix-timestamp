@@ -2,9 +2,6 @@ import sys
 import datetime
 from datetime import datetime as dt
 
-args = sys.argv
-unix_arg, normal_arg = False, False
-
 
 def help_function():    
     help_msg = "Shows help.        $ --help \n" \
@@ -35,6 +32,9 @@ def get_normal_date(unix_date):
         print('Error! no valid input for normal arg!')
 
 
+args = sys.argv
+unix_arg, normal_arg = False, False
+
 
 if '--help' in args:
     help_function()
@@ -48,4 +48,4 @@ else:
         get_unix_date(args)
 
     else:
-        print("No valud input, use [--help]")
+        print("No valid input, use [--help]")
