@@ -12,7 +12,8 @@ def help_function():
 
 def get_unix_date(normal_date):
     try:
-        normal_date = args[args.index('--normal') + 1:]
+        arg_index = args.index('--normal')
+        normal_date = args[arg_index+1:]
         int_normal_date = []
         for i in normal_date:
             int_normal_date.append(int(i))
