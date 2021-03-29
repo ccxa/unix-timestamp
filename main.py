@@ -21,7 +21,7 @@ def get_unix_date(normal_date):
         unix_ts = date.timestamp()
         print(unix_ts)
     except (IndexError, ValueError):
-        print('Error! no valid input for unix arg!')
+        print('Error! no valid input for normal arg! use [--help]')
 
 
 def get_normal_date(unix_date):
@@ -29,7 +29,7 @@ def get_normal_date(unix_date):
         unix_date = args[args.index('--unix') + 1]
         print(dt.fromtimestamp(int(unix_date)))
     except (IndexError, ValueError):
-        print('Error! no valid input for normal arg!')
+        print('Error! no valid input for unix arg! use [--help]')
 
 
 args = sys.argv
@@ -39,13 +39,11 @@ unix_arg, normal_arg = False, False
 if '--help' in args:
     help_function()
 
+elif '--unix' in args:
+    get_normal_date(args)
+
+elif '--normal' in args:
+    get_unix_date(args)
+
 else:
-
-    if '--unix' in args:
-        get_normal_date(args)
-     
-    if '--normal' in args:
-        get_unix_date(args)
-
-    else:
-        print("No valid input, use [--help]")
+    print("No valid input, use [--help]")
