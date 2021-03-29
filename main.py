@@ -6,7 +6,7 @@ from datetime import datetime as dt
 def help_function():    
     help_msg = "Shows help.        $ --help \n" \
             "To get normal date $ --unix <UnixDate>\n" \
-            "To get unix date.  $ --normal <Y M D H M S>"
+            "To get unix date.  $ --normal <YYYY MM DD HH MM SS>"
     print(help_msg)
 
 
