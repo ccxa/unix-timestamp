@@ -19,7 +19,7 @@ def get_unix_date(normal_date):
             int_normal_date.append(int(i))
         y, m, d, h, _m, s = int_normal_date
         date = datetime.datetime(y, m, d, h, _m, s)
-        unix_ts = date.timestamp()
+        unix_ts = int(date.timestamp())
         print(unix_ts)
     except (IndexError, ValueError):
         print('Error! no valid input for normal arg! use [--help]')
