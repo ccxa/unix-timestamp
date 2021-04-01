@@ -34,8 +34,6 @@ def get_normal_date(unix_date):
 
 
 args = sys.argv
-unix_arg, normal_arg = False, False
-
 
 if '--help' in args:
     help_function()
