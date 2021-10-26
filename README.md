@@ -11,7 +11,6 @@ A little python3 app to quickly convert human & Unix timestamp to each other!
 
 Just run main.py by args to get your answer!<br>
 use --normal arg when you wanna convert a normal timestamp to unix format!
--> --normal <yyyy mm dd hh mm ss><br>
 ```bash
 python3 main.py --normal 2019 01 01 00 00 00
 ```
